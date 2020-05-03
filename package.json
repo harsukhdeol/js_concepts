@@ -1,0 +1,20 @@
+{
+  "name": "js_concepts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "callstack.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harsukhdeol/js_concepts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harsukhdeol/js_concepts/issues"
+  },
+  "homepage": "https://github.com/harsukhdeol/js_concepts#readme"
+}
