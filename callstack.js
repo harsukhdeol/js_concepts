@@ -2,15 +2,21 @@
 
 Google V8 Engine has 
 Memory Heap - where memory allocation happens
-Callstack - where stack frames are as code executes
-Message Queue - list of messages to be proccessed and associated callback functions to execute
-            
+Callstack -keeps track of what function is executing and what will be executed after that
 
-Event Loop - looks at stack and pushes the first thing on the queue to stack when it sees empty stack
+Event table - everytime do asycn opration, its added to Event table
+            - datastructure that knows that a certain function should be triggered after a certain event
+            - keeps track of events and sends them to Event Queue
+
+Message/Event Queue - list of messages to be proccessed and associated callback functions to execute
+                    - stores correct order in which fucntions should be executed
+                    - gets function calls from Event Table
+
+Event Loop - checks if callstack empty
+            - pushes the first thing on the queue to stack
             - each message/callback processed completely before anything else is processed
+            
 JS single threaded - does one thing at a time
-
-Callstack - data structure that records where in the program we are
 
 Blowing the stack - when reach max call stack size
 */
