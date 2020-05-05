@@ -11,7 +11,7 @@ function declared() {
 let name = function expression() {
     //not hoisted
 }
-//use expression when dont wanna make global fxn
+//use expression when dont wanna make global fxn, callbacks, IIFE
 let anonExpression = function () {
     //anon function set to a variable
 }
@@ -47,3 +47,11 @@ console.log(a);//updates to 5
     let test = "inside block"
 }
 //console.log(test)//not defined
+
+//IIFE with params
+(function IIFE(msg, times) {
+    for (var i = 1; i <= times; i++) {
+        console.log(msg);
+    }
+}("Hello!", 5));
+
