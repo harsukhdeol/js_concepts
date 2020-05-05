@@ -2,7 +2,8 @@
 
 //undefined, null
 //boolean, number, string - can be wrapped in objects
-
+/*Number = double-precision 64-bit binary format IEEE 754 value (numbers between -(2^53 − 1) and 2^53 − 1)
+- has three symbolic values: +Infinity, -Infinity, and NaN ("Not a Number") */
 
 typeof true; //"boolean"
 typeof Boolean(true); //"boolean"
