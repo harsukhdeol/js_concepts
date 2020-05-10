@@ -41,3 +41,13 @@ console.log(34 >>> 1);
 console.log(-34 >>> 1);
 console.log(Number(34 >>> 1).toString(2), Number(-34 >>> 1).toString(2));
 
+/*Typed Arrays - array-like objects that allow
+ reading and writing with raw binary data in memory buffers
+
+Each entry in a JavaScript typed array is a raw binary value
+ in one of a number of supported formats,
+  from 8-bit integers to 64-bit floating-point numbers
+
+  Array buffers store data, views access it by providing
+  starting offset ans num of elements
+*/
