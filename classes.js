@@ -1,10 +1,8 @@
-/*"Instantiating" a class in JavaScriptcreates object
--not independent of its parent class
-
+/*
 - linked to a prototype-changes to that prototype 
 propagate to the new object, even after instantiation.
 
-
+- classes don't rlly exist in js - acc prototype model
 */
 
 //Base classes - don't use extend
@@ -12,7 +10,7 @@ propagate to the new object, even after instantiation.
 class Food {//Classes can only contain method definitions, not data properties
     constructor(name, protien, carbs, fat) {
         this.name = name;
-        this.carbs = carbs;
+        this.carbs = carbs; //this = object that is being created
         this.protien = protien;
         this.fat = fat;
     }
@@ -32,7 +30,7 @@ console.log(chocolate.fat)//can refer to properties on instances directly
 
 
 //Subclasses with extends
-class Fruits extends Food {
+class Fruits extends Food {//don't need constrcutor and super if not adding more properties
     constructor(name, protien, carbs) {//defines properties of obj - only place super can be called
         super(name, protien, carbs, 0)
         //methods in constructor = static methods- not available on instances of class
@@ -42,6 +40,7 @@ class Fruits extends Food {
     print() {
         super.print();
         console.log(`${this.name} has no fat`)
+        return this;//return instance of object to be able to do method chaining
     }
 }
 
@@ -49,10 +48,10 @@ const apple = new Fruits('apple', 1, 10);
 apple.print()
 
 /*
-Calling new creates new object
+Calling new creates new empty object
  - gets linked to another object (prototype)
  - this value is set to refer to new object
-
+- calls constructor method
 
 
  All functions have a property, called .prototype,

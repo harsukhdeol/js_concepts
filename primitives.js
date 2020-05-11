@@ -42,7 +42,7 @@ console.log(typeof (num2))
 const user1 = {
     name: "user1",
     info: {
-        favColor: "pink"
+        favColor: "pink"//encapsulation - capturing everything need for a user inside object
     }
 }
 user1.name = "another user";// allows change
