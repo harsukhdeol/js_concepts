@@ -43,5 +43,15 @@ sayHi.apply(jin, food)//send array , gives same result
 const newFxn = sayHi.bind(jin, " lemon ");//created new fxn
 newFxn();//called later
 
+//Lexical Binding - when use arrow fxn, this = scope fxn is in 
+const wrapper = {
+    name = "ginny",
+    arrFxn = () => {
+        console.log(this)
+
+    }
+}
+console.log(this)
+wrapper.arrFxn()
 // when new keyword used, this = new object created
 // if nothing works, this = window object
