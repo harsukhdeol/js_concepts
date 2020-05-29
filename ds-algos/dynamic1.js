@@ -1,17 +1,20 @@
 //n steps, can take 1 or 2 at a time
+
+//memoization - store previous results
 var climbStairs = function (n) {
-  let count = 0;
-  var climb = function (n) {
-    if (n == 1) {
-      //write base case
-      return 1;
-    }
-    return climb(n - 1) + climb(n - 2);
-  };
-  return count;
+  let memo = [n + 1];
+  return climb(0, n, memo);
 };
 
-//limbStairs(3);
-//memoization - store previous results
+var climb = function (i, n, memo) {
+  console.log("run");
+  if (memo[i] > 0) return memo[i];
+  console.log(memo);
+  if (i > n) return 0;
+  if (i == 0) return 1;
+  memo[i] = climb(i + 1, n, memo) + climb(i + 2, n, memo);
 
-function square(n) {}
+  return memo[i];
+};
+
+climbStairs(3);
