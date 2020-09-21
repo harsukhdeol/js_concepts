@@ -1,4 +1,4 @@
-function createQueue() {
+export default function createQueue() {
   const queue = []; // first in, first oout
   //last item in arr is first out, items added to front- highest index removed first
   return {
@@ -64,13 +64,13 @@ function createPriorityQueue() {
   };
 }
 
-const q = createPriorityQueue();
+/*const q = createPriorityQueue();
 
-q.enqueue("create feature");
+ q.enqueue("create feature");
 q.enqueue("emergency task", true);
 q.enqueue("bug fix");
 
 console.log(q.peek());
 q.dequeue();
 console.log(q.peek());
-console.log(q.length);
+console.log(q.length); */
